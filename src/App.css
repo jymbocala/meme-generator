@@ -1,16 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HEADER */
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   padding: 20px;
+  color: white;
   text-align: center;
   background: rgb(63,94,251);
   background: linear-gradient(121deg, rgba(63,94,251,1) 15%, rgba(252,70,107,1) 100%);
-  color: white;
   box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.305);
 }
 
 #troll-img {
   width: 40px;
   margin-right: 15px;
+}
+
+/* MEME */
+.meme {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.form-input-top-text,
+.form-input-bottom-text {
+  width: 100%;
+  line-height: 35px;
+  margin: 10px 0;
+  text-indent: 0.75rem;
+  border: 1px solid rgba(213, 212, 216, 1);
+  border-radius: 5px;
+}
+
+.form-button {
+  background: rgb(63,94,251);
+  background: linear-gradient(121deg, rgba(63,94,251,1) 15%, rgba(252,70,107,1) 100%);
+  width: 100%;
+  line-height: 35px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 768px) {
+  .meme {
+    margin-top: 2rem;  
+  }
+
+  .meme--form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .form-input-top-text,
+  .form-input-bottom-text {
+    width: 48%;
+  }
+
+  .form-button {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
 }
