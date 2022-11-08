@@ -58,11 +58,19 @@
   font-size: 16px;
 }
 
+.meme--image {
+  width: 100%;
+  height: auto;
+  margin: 2rem 0;
+  border-radius: 2px;
+}
+
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 768px) {
   .meme {
-    margin-top: 2rem;  
+    margin-top: 2rem;
+    max-width: 570px;  
   }
 
   .meme--form {
@@ -82,5 +90,4 @@
     margin-top: 1rem;
     width: 100%;
   }
-
 }
