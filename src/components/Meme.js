@@ -4,39 +4,39 @@ export default function Meme() {
   const [meme, setMeme] = React.useState({
     topText: "",
     bottomText: "",
-    url: "https://i.imgflip.com/23ls.jpg"
+    url: "https://i.imgflip.com/23ls.jpg",
   });
 
   const [allMemes, setAllMemes] = React.useState([]);
 
   React.useEffect(() => {
     async function getMemes() {
-        const res = await fetch("https://api.imgflip.com/get_memes")
-        const data = await res.json()
-        setAllMemes(data.data.memes)
+      const res = await fetch("https://api.imgflip.com/get_memes");
+      const data = await res.json();
+      setAllMemes(data.data.memes);
     }
-    getMemes()
-  }, []) 
+    getMemes();
+  }, []);
 
   function getMemeImage(event) {
     event.preventDefault();
-    const memesArray = allMemes.data.memes;
+    const memesArray = allMemes;
     const randomMemeImage =
-    memesArray[Math.floor(Math.random() * memesArray.length)].url;
-    setMeme(prevMeme => {
+      memesArray[Math.floor(Math.random() * memesArray.length)].url;
+    setMeme((prevMeme) => {
       return {
         ...prevMeme,
-        url: randomMemeImage
+        url: randomMemeImage,
       };
     });
   }
 
   function handleChange(event) {
     const { name, value } = event.target;
-    setMeme(prevMeme => {
+    setMeme((prevMeme) => {
       return {
         ...prevMeme,
-        [name]: value
+        [name]: value,
       };
     });
   }
