@@ -1,4 +1,4 @@
-# tripscards
+# Meme Generator
 <div align="center">
   <img src="src/assets/meme-generator-preview.png">
 </div>
